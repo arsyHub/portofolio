@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="container m-auto ">
       {/* Hero Section */}
-      <div className="flex justify-between mt-10 px-10 md:px-28 lg:px-32">
+      <div className="flex justify-between mt-10 px-5 md:px-28 lg:px-32">
         <div>
           <h1 className="text-sm md:text-lg">👋Hello, I am</h1>
           <h1 className="font-semibold text-2xl md:text-3xl text-slate-700 my-2">ARSY BERLIAN ADNIN</h1>
