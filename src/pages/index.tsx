@@ -4,10 +4,19 @@ export default function Home() {
   return (
     <>
       {/* navbar section */}
-      <nav className="h-10 backdrop-blur-lg shadow-sm sticky top-0"></nav>
+      <nav className="h-10 backdrop-blur-lg shadow-sm sticky top-0 z-50 container mx-auto px-5">
+        <div className="flex  justify-between items-center mt-2">
+          <div>
+            <h1>Logo</h1>
+          </div>
+          <div>
+            <button className="shadow-md text-[12px] bg-slate-600 hover:bg-[orange] text-white py-1 px-3 rounded-xl">Say Hi, 😎</button>
+          </div>
+        </div>
+      </nav>
       {/* end navbar section */}
 
-      <main className="container m-auto ">
+      <main className="container m-auto">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row md:justify-between mt-10 px-5 md:px-28 lg:px-32">
           {/* Left section */}
