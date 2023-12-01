@@ -10,6 +10,14 @@ body {
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
 
+.background-grid {
+  background-image: linear-gradient(#c8f8f9 0.5px, transparent 0.5px, transparent calc(100% - 0.5px), #c8f8f9 calc(100% - 0.5px)),
+    linear-gradient(90deg, #c8f8f9 0.5px, transparent 0.5px, transparent calc(100% - 0.5px), #c8f8f9 calc(100% - 0.5px));
+  background-size: 11.11111111111111% 14.285714285714286%;
+  border: 0.5px solid #c8f8f9;
+  /* background-color: rgba(212, 253, 253, 0.466); */
+}
+
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
