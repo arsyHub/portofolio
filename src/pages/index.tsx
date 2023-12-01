@@ -1,32 +1,40 @@
+import { Navbar } from "flowbite-react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+
 export default function Home() {
   return (
     <>
       {/* navbar section */}
-      <nav className="h-10 backdrop-blur-lg shadow-sm sticky top-0 z-50 container mx-auto px-5">
-        <div className="flex  justify-between items-center mt-2">
-          <div>
-            <h1>Logo</h1>
-          </div>
-          <div>
-            <button className="shadow-md text-[12px] bg-slate-600 hover:bg-[orange] text-white py-1 px-3 rounded-xl">Say Hi, 😎</button>
-          </div>
-        </div>
-      </nav>
+      <Navbar fluid={false} rounded={true} className="backdrop-blur-lg shadow-sm bg-[transparent] sticky top-0 z-50">
+        <Navbar.Brand href="https://flowbite.com/">
+          <img src="/img/logo.png" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+          <span className="self-center whitespace-nowrap text-slate-700 text-sm font-semibold dark:text-white">ArsyHub</span>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="text-[12px]">
+          <Navbar.Link href="/navbars" active={true}>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="/navbars">Project</Navbar.Link>
+          <Navbar.Link href="/navbars">Experience</Navbar.Link>
+          <Navbar.Link href="/navbars">Education</Navbar.Link>
+          <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
       {/* end navbar section */}
 
-      <main className="container m-auto">
+      <main className="container m-auto h-[1000px]">
         {/* Hero Section */}
-        <div className="flex flex-col md:flex-row md:justify-between mt-10 px-5 md:px-28 lg:px-32">
+        <div className="flex flex-col md:flex-row md:justify-between mt-10 px-5 md:px-1 lg:px-32 ">
           {/* Left section */}
           <div>
             <h1 className="text-sm md:text-lg">
               Hello👋, I am <span className=" text-[#11C5C6]">Arsy Berlian</span>
             </h1>
 
-            <h1 className="font-semibold text-2xl md:text-3xl text-slate-700 my-2">
-              Build a website <br /> with React as a frontend web developer
+            <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl text-slate-700 my-2">
+              Build a website <br /> with React as a frontend web <br /> <span className="text-[orange]">developer</span>
             </h1>
 
             <h1 className="text-[12px] md:text-sm text-slate-600 ">🌐 JavaScript | React | Next.js | Tailwind</h1>
@@ -47,14 +55,14 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <h1 className="text-[12px] font-semibold animate-pulse">JavaScript</h1>
+                <h1 className="text-[12px] font-semibold ">JavaScript</h1>
                 <p className="text-[10px] typewriter">
                   <span className="text-[#11C5C6]">const</span> myName <span className="text-yellow-500">=</span> &quot;Arsy Berlian&quot;
                 </p>
               </div>
             </div>
 
-            <Image src="/img/hero.png" alt="" className=" img w-[200px] md:w-[210px]" width={200} height={200} />
+            <Image src="/img/hero.png" alt="" className=" img w-[200px] md:w-[210px] lg:w-[220px] " width={200} height={200} />
           </div>
         </div>
         {/* End Hero Section */}
