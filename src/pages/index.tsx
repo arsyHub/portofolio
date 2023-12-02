@@ -3,17 +3,35 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 export default function Home() {
+  const projectItem = [
+    {
+      title: "Project title 1",
+      image: "https://glints.com/id/lowongan/wp-content/uploads/2020/07/landbook.jpg",
+      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    },
+    {
+      title: "Project title 2",
+      image: "https://glints.com/id/lowongan/wp-content/uploads/2020/07/landbook.jpg",
+      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    },
+    {
+      title: "Project title 3",
+      image: "https://glints.com/id/lowongan/wp-content/uploads/2020/07/landbook.jpg",
+      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    },
+  ];
+
   return (
     <>
       {/* navbar section */}
       <Navbar fluid={false} rounded={true} className="backdrop-blur-lg shadow-sm bg-[transparent] sticky top-0 z-50">
         <Navbar.Brand href="https://flowbite.com/">
-          <img src="/img/logo.png" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+          <img src="/img/logo.png" className="mr-3 h-6 sm:h-9" alt="Logo" />
           <span className="self-center whitespace-nowrap text-slate-700 text-sm font-semibold dark:text-white">ArsyHub</span>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="text-[12px]">
-          <Navbar.Link href="/navbars" active={true}>
+          <Navbar.Link href="/navbars" active={false}>
             Home
           </Navbar.Link>
           <Navbar.Link href="/navbars">Project</Navbar.Link>
@@ -24,7 +42,7 @@ export default function Home() {
       </Navbar>
       {/* end navbar section */}
 
-      <main className="container m-auto h-[1000px] mt-10 px-5 md:px-1 lg:px-32">
+      <main className="container m-auto  mt-10 px-5 md:px-1 lg:px-24">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row md:justify-between  ">
           {/* Left section */}
@@ -44,7 +62,7 @@ export default function Home() {
 
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
-            <div className="animate-bounce  -mx-[80px] md:-mx-[120px] my-[120px] flex gap-2 p-1  backdrop-blur-lg	border border-[#f7f7f7] rounded-sm absolute z-10">
+            <div className=" -mx-[80px] md:-mx-[120px] my-[120px] flex gap-2 p-1  backdrop-blur-lg	border border-[#f7f7f7] rounded-sm absolute z-10">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -65,65 +83,37 @@ export default function Home() {
             <Image src="/img/hero.png" alt="" className=" img w-[200px] md:w-[210px] lg:w-[220px] " width={200} height={200} />
           </div>
         </div>
+        <div className="w-full h-[55px]  bg-gradient-to-t from-[azure] -mt-[40px] sticky" />
         {/* End Hero Section */}
 
         {/* Projec Section */}
-
-        <div className="bg-[#ffffff96] absolute w-full left-0 ">
-          <div className=" p-5">
-            <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl text-slate-700 my-2">Projects</h1>
+        <div className="mt-[100px] ">
+          <h1 className="text-3xl font-bold mb-10">
+            💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Project</span>
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {projectItem.map((item, index) => {
+              return (
+                <div key={index} className=" w-[100%]  border border-[white] overflow-hidden rounded-sm py-5 px-3 group">
+                  <div className="shadow-2xl relative rounded-lg overflow-hidden ">
+                    <div className="relative ">
+                      <img className="w-full h-[200px] lg:h-[250px] bg-" src={item.image} alt="" />
+                      <div className="h-[55px] w-full  bg-gradient-to-t from-[azure] absolute -bottom-[10px] " />
+                    </div>
+                    <div className="absolute h-[70%] group-hover:bottom-0 ease-in-out duration-300 w-full  left-0 -bottom-[200px] p-4 bg-gradient-to-t from-[black] ">
+                      <h1 className="text-[12px] font-semibold mb-1 text-[#fff]">{item.title}</h1>
+                      <p className="text-white text-[12px] mb-5">{item.desc}</p>
+                      <div className="flex gap-2 bottom-5 absolute">
+                        <button className="bg-[#11C5C6] text-sm text-white px-3 h-[max-content] py-1 rounded">Visit</button>
+                        <button className="border border-[#11C5C6] text-sm text-white px-3 h-[max-content] py-1 rounded">❤️ Love</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="p-5 relative flex gap-2 md:justify-around justify-center  flex-wrap">
-            {/* Card item */}
-            <div className="md:w-[320px]  p-2 backdrop-blur-3xl border  border-slate-300 rounded-lg shadow-lg">
-              <div className="flex  gap-2 items-center mb-3">
-                <img src="/img/logo.png" alt="" className="w-[30px] h-[30px] " />
-                <div>
-                  <h1 className="text-sm font-semibold">arsy</h1>
-                  <p className="text-[12px]">post: 1 des 2023</p>
-                </div>
-              </div>
-              <img src="https://plus.unsplash.com/premium_photo-1669324357471-e33e71e3f3d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-              <h1 className="text-xl mt-2 text-slate-600 font-semibold">Sistem Website Sekolah</h1>
-              <p className="mt-3 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, minus.</p>
-              <br />
-              <hr />
-              <button className=" bg-[#11C5C6] text-white p-2 rounded-lg mt-3 px-10 shadow-md"> Visit</button>
-            </div>
-
-            <div className="md:w-[320px]  p-2 backdrop-blur-3xl border  border-slate-300 rounded-lg shadow-lg">
-              <div className="flex  gap-2 items-center mb-3">
-                <img src="/img/logo.png" alt="" className="w-[30px] h-[30px] " />
-                <div>
-                  <h1 className="text-sm font-semibold">arsy</h1>
-                  <p className="text-[12px]">post: 1 des 2023</p>
-                </div>
-              </div>
-              <img src="https://plus.unsplash.com/premium_photo-1669324357471-e33e71e3f3d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-              <h1 className="text-xl mt-2 text-slate-600 font-semibold">Sistem Website Sekolah</h1>
-              <p className="mt-3 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, minus.</p>
-              <br />
-              <hr />
-              <button className=" bg-[#11C5C6] text-white p-2 rounded-lg mt-3 px-10 shadow-md"> Visit</button>
-            </div>
-
-            <div className="md:w-[320px]  p-2 backdrop-blur-3xl border  border-slate-300 rounded-lg shadow-lg">
-              <div className="flex  gap-2 items-center mb-3">
-                <img src="/img/logo.png" alt="" className="w-[30px] h-[30px] " />
-                <div>
-                  <h1 className="text-sm font-semibold">arsy</h1>
-                  <p className="text-[12px]">post: 1 des 2023</p>
-                </div>
-              </div>
-              <img src="https://plus.unsplash.com/premium_photo-1669324357471-e33e71e3f3d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-              <h1 className="text-xl mt-2 text-slate-600 font-semibold">Sistem Website Sekolah</h1>
-              <p className="mt-3 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, minus.</p>
-              <br />
-              <hr />
-              <button className=" bg-[#11C5C6] text-white p-2 rounded-lg mt-3 px-10 shadow-md"> Visit</button>
-            </div>
-            {/* End card */}
-          </div>
+          {/* <div className="bg-[#ffffff96] absolute w-full left-0 "></div> */}
         </div>
         {/* End Project Section */}
       </main>
