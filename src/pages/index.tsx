@@ -88,13 +88,13 @@ export default function Home() {
 
         {/* Projec Section */}
         <div className="mt-[100px] ">
-          <h1 className="text-3xl font-bold mb-10">
+          <h1 className="text-3xl font-bold ">
             💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Project</span>
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden p-5 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4   overflow-y-hidden">
             {projectItem.map((item, index) => {
               return (
-                <div key={index} className="glow w-[100%]  border border-[white] overflow-hidden rounded-sm py-5 px-3 group">
+                <div key={index} className="w-[100%]  border border-[white] overflow-hidden rounded-sm py-5 px-3 group">
                   <div className="shadow-2xl relative rounded-lg overflow-hidden ">
                     <div className="relative ">
                       <img className="w-full h-[200px] lg:h-[250px] bg-" src={item.image} alt="" />
