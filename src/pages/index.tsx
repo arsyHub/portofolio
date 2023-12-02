@@ -62,7 +62,7 @@ export default function Home() {
 
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
-            <div className=" -mx-[80px] md:-mx-[120px] my-[120px] flex gap-2 p-1  backdrop-blur-lg	border border-[#f7f7f7] rounded-sm absolute z-10">
+            <div className=" -mx-[80px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -80,7 +80,13 @@ export default function Home() {
               </div>
             </div>
 
-            <Image src="/img/hero.png" alt="" className=" img w-[200px] md:w-[210px] lg:w-[220px] " width={200} height={200} />
+            {/* <div className=" mx-[190px] md:mx-[180px]  my-[200px] flex gap-2 p-1  backdrop-blur-lg	 	rounded-full absolute z-10">
+              <div className=" w-[40px] h-[40px] rounded-full bg-[#ffffff88] flex justify-center items-center p-2">
+                <img className="text-sm" src="/img/tailwind.png" alt="" />
+              </div>
+            </div> */}
+
+            <Image src="/img/hero.png" alt="" className=" img w-[250px] md:w-[210px] lg:w-[250px] " width={200} height={200} />
           </div>
         </div>
         <div className="w-full h-[55px]  bg-gradient-to-t from-[azure] -mt-[40px] sticky" />
