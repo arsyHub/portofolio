@@ -26,7 +26,7 @@ export default function Home() {
       {/* navbar section */}
       <Navbar fluid={false} rounded={true} className="backdrop-blur-lg shadow-sm bg-[transparent] sticky top-0 z-50">
         <Navbar.Brand href="https://flowbite.com/">
-          <img src="/img/logo.png" className="mr-3 h-6 sm:h-9" alt="Logo" />
+          <img src="/img/logo.png" className="mr-3 ml-1 h-6 sm:h-9" alt="Logo" />
           <span className="self-center whitespace-nowrap text-slate-700 text-sm font-semibold dark:text-white">ArsyHub</span>
         </Navbar.Brand>
         <Navbar.Toggle />
@@ -42,7 +42,7 @@ export default function Home() {
       </Navbar>
       {/* end navbar section */}
 
-      <main className="container m-auto  mt-10 px-5 md:px-1 lg:px-24">
+      <main className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row md:justify-between  ">
           {/* Left section */}
@@ -80,11 +80,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* <div className=" mx-[190px] md:mx-[180px]  my-[200px] flex gap-2 p-1  backdrop-blur-lg	 	rounded-full absolute z-10">
-              <div className=" w-[40px] h-[40px] rounded-full bg-[#ffffff88] flex justify-center items-center p-2">
-                <img className="text-sm" src="/img/tailwind.png" alt="" />
-              </div>
-            </div> */}
+            <div className=" md:mx-[60px] lg:mx-[180px] mx-[160px]  my-[260px] flex gap-2 p-3 rounded-md w-[max-content] shadow-lg bg-slate-100 absolute z-10">
+              <h1 className="text-[12px] font-semibold ">🌐 Web Development</h1>
+            </div>
 
             <Image src="/img/hero.png" alt="" className=" img w-[250px] md:w-[210px] lg:w-[250px] " width={200} height={200} />
           </div>
@@ -94,7 +92,7 @@ export default function Home() {
 
         {/* Projec Section */}
         <div className="mt-[100px] ">
-          <h1 className="text-3xl font-bold ">
+          <h1 className="text-3xl font-bold mb-2">
             💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Project</span>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4   overflow-y-hidden">
@@ -119,7 +117,6 @@ export default function Home() {
               );
             })}
           </div>
-          {/* <div className="bg-[#ffffff96] absolute w-full left-0 "></div> */}
         </div>
         {/* End Project Section */}
       </main>
