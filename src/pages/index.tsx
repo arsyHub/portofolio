@@ -62,7 +62,7 @@ export default function Home() {
 
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
-            <div className=" -mx-[80px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
+            <div className=" -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
