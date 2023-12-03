@@ -52,6 +52,65 @@ export default function Home() {
     },
   ];
 
+  const skillItem = [
+    {
+      img: "",
+      name: "HTML",
+    },
+    {
+      img: "",
+      name: "CSS",
+    },
+    {
+      img: "",
+      name: "JavaScipt",
+    },
+    {
+      img: "",
+      name: "ReactJS",
+    },
+    {
+      img: "",
+      name: "NextJS",
+    },
+    {
+      img: "",
+      name: "Tailwind",
+    },
+    {
+      img: "",
+      name: "Ant Design",
+    },
+    {
+      img: "",
+      name: "Postman",
+    },
+    {
+      img: "",
+      name: "VsCode",
+    },
+    {
+      img: "",
+      name: "Bootstrap",
+    },
+    {
+      img: "",
+      name: "ExpressJS",
+    },
+    {
+      img: "",
+      name: "MySQL",
+    },
+    {
+      img: "",
+      name: "Github",
+    },
+    {
+      img: "",
+      name: "Gitlab",
+    },
+  ];
+
   return (
     <>
       {/* navbar section */}
@@ -274,7 +333,29 @@ export default function Home() {
           </div>
         </div>
         {/* end education */}
+        <h1 className="mt-[50px] text-3xl font-bold mb-2 -ml-3">
+          🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Skills & Tools</span>
+          {/* 🧑‍💻 <span className="text-white">Skills & Tools</span> */}
+        </h1>
       </main>
+
+      {/* skill section */}
+      <div className=" bg-gradient-to-l from-[#11C5C6] to-[#26C9FC] py-5 shadow-sm">
+        <div className="container m-auto px-5 md:px-1 lg:px-24 relative">
+          <div className="flex flex-wrap gap-3 md:justify-center ">
+            {skillItem.map((item, index) => {
+              return (
+                <div key={index} className="shadow-sm flex gap-2 justify-center hover:cursor-pointer border border-[#fff] rounded-lg w-[max-content] px-3 py-1 ">
+                  {/* <img className="w-[20px] h-[20px]" src="" alt="" /> */}
+                  <h1 className="text-[13px] tracking-wide text-[#fff]">{item.name}</h1>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* end skill section */}
 
       {/* footer */}
 
