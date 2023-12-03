@@ -21,6 +21,37 @@ export default function Home() {
     },
   ];
 
+  const experienceItem = [
+    {
+      year: "2023",
+      status: "Staff IT",
+      title: "Frontend Web Developer at ",
+      companyName: "Future Gate High School",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam quas excepturi numquam doloremque. Odio, dolor, eius excepturi deserunt quidem vel iusto mollitia architecto maxime quis vero unde quam dolore.",
+    },
+    {
+      year: "2023",
+      status: "Bootcamp",
+      title: "Learn to Create Web Applications with React in ",
+      companyName: "Dicoding",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam quas excepturi numquam doloremque. Odio, dolor, eius excepturi deserunt quidem vel iusto mollitia architecto maxime quis vero unde quam dolore.",
+    },
+    {
+      year: "2023",
+      status: "Bootcamp",
+      title: "Learn to Create Backend Applications for Beginners in ",
+      companyName: "Dicoding",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam quas excepturi numquam doloremque. Odio, dolor, eius excepturi deserunt quidem vel iusto mollitia architecto maxime quis vero unde quam dolore.",
+    },
+    {
+      year: "2021",
+      status: "Internship Student",
+      title: "Frontend Web Developer at",
+      companyName: "PT. Microdata Indonesia",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam quas excepturi numquam doloremque. Odio, dolor, eius excepturi deserunt quidem vel iusto mollitia architecto maxime quis vero unde quam dolore.",
+    },
+  ];
+
   return (
     <>
       {/* navbar section */}
@@ -126,96 +157,29 @@ export default function Home() {
             🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Experiences</span>
           </h1>
           <ol className="relative border-s border-gray-200 dark:border-gray-700">
-            <li className="mb-10 ms-6">
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
-              </span>
-              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                <div className="items-center justify-between mb-3 sm:flex">
-                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
-                  <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Staff IT</span>
-                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Frontend Web Developer at{" "}
-                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
-                      Future Gate High School
-                    </a>
+            {experienceItem.map((item, index) => {
+              return (
+                <li key={index} className="mb-10 ms-6">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                    <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+                  </span>
+                  <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                    <div className="items-center justify-between mb-3 sm:flex">
+                      <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">{item.year}</time>
+                      <br />
+                      <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md ">{item.status}</span>
+                      <div className="mt-1 text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                        {item.title}{" "}
+                        <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
+                          {item.companyName}
+                        </a>
+                      </div>
+                    </div>
+                    <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">{item.desc}</div>
                   </div>
-                </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
-                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
-                  Measurement.
-                </div>
-              </div>
-            </li>
-            <li className="mb-10 ms-6">
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
-              </span>
-              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                <div className="items-center justify-between mb-3 sm:flex">
-                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
-                  <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Bootcamp</span>
-                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Learn to Create Web Applications with React in{" "}
-                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
-                      Dicoding
-                    </a>
-                  </div>
-                </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
-                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
-                  Measurement.
-                </div>
-              </div>
-            </li>
-
-            <li className="mb-10 ms-6">
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
-              </span>
-              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                <div className="items-center justify-between mb-3 sm:flex">
-                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
-                  <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Bootcamp</span>
-                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Learn to Create Backend Applications for Beginners in{" "}
-                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
-                      Dicoding
-                    </a>
-                  </div>
-                </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
-                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
-                  Measurement.
-                </div>
-              </div>
-            </li>
-
-            <li className="mb-10 ms-6">
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
-              </span>
-              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                <div className="items-center justify-between mb-3 sm:flex">
-                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2021</time>
-                  <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Internship Student</span>
-                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Created a government website at{" "}
-                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
-                      PT. Microdata Indonesia
-                    </a>
-                  </div>
-                </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
-                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
-                  Measurement.
-                </div>
-              </div>
-            </li>
+                </li>
+              );
+            })}
           </ol>
         </div>
 
@@ -248,7 +212,7 @@ export default function Home() {
             </div>
           </div>
           <hr />
-          <h1 className="text-center font-semibold text-[12px] ">Made with ❤️ by Arsy Berlian - 2023</h1>
+          <h1 className="mt-1 text-center font-semibold text-[12px] ">Made with ❤️ by Arsy Berlian - 2023</h1>
         </div>
       </footer>
 
