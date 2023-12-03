@@ -253,6 +253,27 @@ export default function Home() {
           <div className="absolute bottom-0 w-[100%] h-[60px] bg-gradient-to-t from-[azure] blur-sm"></div>
         </div>
         {/* End Experience Section */}
+
+        {/* education section */}
+        <div className="relative overflow-hidden group ">
+          <h1 className="text-3xl font-bold mb-10 -ml-3">
+            🎓 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Education</span>
+          </h1>
+
+          <div className="overflow-hidden hover:cursor-pointer hover:shadow-lg md:py-[50px] md:px-[50px] flex justify-between bg-gradient-to-r from-[#11C5C6] to-[#72DAC3] relative py-2 px-3 shadow-sm border border-[#11c6c66e] rounded-lg">
+            <div className="relative z-10">
+              <span className="text-xs font-normal text-white sm:order-last sm:mb-0">2018 - 2022</span>
+              <h1 className="group-hover:text-[azure] duration-300 ease-in-out font-bold text-[#fff] tracking-wide">S1 Informatics</h1>
+              <p className="text-[12px] md:text-sm text-white tracking-wide">Universitas Teknokrat Indonesia</p>
+            </div>
+
+            <span className="block text-[100px] absolute z-[1] -left-[50px] rotate-45 opacity-20">🎓</span>
+          </div>
+          <div className="absolute right-3 -bottom-1 w-[150px] md:w-[250px] md:-bottom-[10px] ">
+            <img className="group-hover:scale-110 duration-300 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)]" src="/img/guard.png" alt="" />
+          </div>
+        </div>
+        {/* end education */}
       </main>
 
       {/* footer */}
