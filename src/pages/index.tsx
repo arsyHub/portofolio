@@ -133,8 +133,10 @@ export default function Home() {
               <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
+                  <br />
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Staff IT</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Staff IT as Frontend Web Developer at{" "}
+                    Frontend Web Developer at{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
                       Future Gate High School
                     </a>
@@ -153,8 +155,10 @@ export default function Home() {
               <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
+                  <br />
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Bootcamp</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Belajar Membuat Aplikasi Web dengan React on{" "}
+                    Learn to Create Web Applications with React in{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
                       Dicoding
                     </a>
@@ -174,8 +178,10 @@ export default function Home() {
               <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
+                  <br />
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Bootcamp</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Belajar Membuat Aplikasi Backend Untuk Pemula{" "}
+                    Learn to Create Backend Applications for Beginners in{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
                       Dicoding
                     </a>
@@ -195,10 +201,12 @@ export default function Home() {
               <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2021</time>
+                  <br />
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Internship Student</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Student Intership Membuat website BAPPEDA mesuji{" "}
+                    Created a government website at{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
-                      PT.Microdata Indonesia
+                      PT. Microdata Indonesia
                     </a>
                   </div>
                 </div>
