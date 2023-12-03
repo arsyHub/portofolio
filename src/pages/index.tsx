@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
                   <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Staff IT</span>
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Staff IT</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
                     Frontend Web Developer at{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
@@ -156,7 +156,7 @@ export default function Home() {
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
                   <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Bootcamp</span>
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Bootcamp</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
                     Learn to Create Web Applications with React in{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
@@ -179,7 +179,7 @@ export default function Home() {
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
                   <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Bootcamp</span>
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Bootcamp</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
                     Learn to Create Backend Applications for Beginners in{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
@@ -202,7 +202,7 @@ export default function Home() {
                 <div className="items-center justify-between mb-3 sm:flex">
                   <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2021</time>
                   <br />
-                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 rounded-md  font-thin">Internship Student</span>
+                  <span className="text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md">Internship Student</span>
                   <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
                     Created a government website at{" "}
                     <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
