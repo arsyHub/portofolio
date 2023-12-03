@@ -62,7 +62,7 @@ export default function Home() {
 
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
-            <div className=" -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
+            <div className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300 -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" md:mx-[60px] lg:mx-[180px] mx-[160px]  my-[260px] flex gap-2 p-3 rounded-md w-[max-content] shadow-lg bg-slate-100 absolute z-10">
+            <div className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300  md:mx-[60px] lg:mx-[180px] mx-[160px]  my-[260px] flex gap-2 p-3 rounded-md w-[max-content] shadow-lg bg-slate-100 absolute z-10">
               <h1 className="text-[12px] font-semibold ">🌐 Web Development</h1>
             </div>
 
@@ -119,6 +119,99 @@ export default function Home() {
           </div>
         </div>
         {/* End Project Section */}
+
+        {/* Experience Section */}
+        <div className="mt-[100px] ml-3">
+          <h1 className="text-3xl font-bold mb-10 -ml-3">
+            🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Experiences</span>
+          </h1>
+          <ol className="relative border-s border-gray-200 dark:border-gray-700">
+            <li className="mb-10 ms-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+              </span>
+              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                <div className="items-center justify-between mb-3 sm:flex">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
+                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                    Staff IT as Frontend Web Developer at{" "}
+                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
+                      Future Gate High School
+                    </a>
+                  </div>
+                </div>
+                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
+                  Measurement.
+                </div>
+              </div>
+            </li>
+            <li className="mb-10 ms-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+              </span>
+              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                <div className="items-center justify-between mb-3 sm:flex">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
+                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                    Belajar Membuat Aplikasi Web dengan React on{" "}
+                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
+                      Dicoding
+                    </a>
+                  </div>
+                </div>
+                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
+                  Measurement.
+                </div>
+              </div>
+            </li>
+
+            <li className="mb-10 ms-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+              </span>
+              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                <div className="items-center justify-between mb-3 sm:flex">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2023</time>
+                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                    Belajar Membuat Aplikasi Backend Untuk Pemula{" "}
+                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
+                      Dicoding
+                    </a>
+                  </div>
+                </div>
+                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
+                  Measurement.
+                </div>
+              </div>
+            </li>
+
+            <li className="mb-10 ms-6">
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+              </span>
+              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                <div className="items-center justify-between mb-3 sm:flex">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2021</time>
+                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                    Student Intership Membuat website BAPPEDA mesuji{" "}
+                    <a href="#" className="font-semibold text-gray-900 dark:text-white hover:underline">
+                      PT.Microdata Indonesia
+                    </a>
+                  </div>
+                </div>
+                <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                  Hi yall! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where well be speaking about
+                  Measurement.
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        {/* End Experience Section */}
       </main>
 
       {/* footer */}
