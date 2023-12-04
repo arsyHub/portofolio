@@ -340,7 +340,7 @@ export default function Home() {
       </main>
 
       {/* skill section */}
-      <div className=" bg-gradient-to-l from-[#11C5C6] to-[#26C9FC] py-5 shadow-sm">
+      <div className=" bg-gradient-to-l   from-[#11C5C6] to-[#72DAC3]  py-5 shadow-sm">
         <div className="container m-auto px-5 md:px-1 lg:px-24 relative">
           <div className="flex flex-wrap gap-3 md:justify-center ">
             {skillItem.map((item, index) => {
