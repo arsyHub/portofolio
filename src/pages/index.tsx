@@ -182,19 +182,19 @@ export default function Home() {
 
         {/* Projec Section */}
         <div className="mt-[100px] ">
-          <h1 className="text-3xl font-bold mb-2">
+          <h1 className="text-2xl font-bold mb-2">
             💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">My Project</span>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4   overflow-y-hidden">
             {projectItem.map((item, index) => {
               return (
                 <div key={index} className="w-[100%]  border border-[white] overflow-hidden rounded-sm py-5 px-3 group">
-                  <div className="shadow-2xl relative rounded-lg overflow-hidden ">
+                  <div className="shadow-xl relative rounded-lg overflow-hidden ">
                     <div className="relative ">
                       <img className="w-full h-[200px] lg:h-[250px] bg-" src={item.image} alt="" />
                       <div className="h-[55px] w-full  bg-gradient-to-t from-[azure] absolute -bottom-[10px] " />
                     </div>
-                    <div className="absolute h-[70%] group-hover:bottom-0 ease-in-out duration-300 w-full  left-0 -bottom-[200px] p-4 bg-gradient-to-t from-[black] ">
+                    <div className="absolute h-[70%] group-hover:bottom-0 ease-in-out duration-300 w-full  left-0 -bottom-[200px] px-4 pt-10 bg-gradient-to-t from-[#2a2a2a] ">
                       <h1 className="text-[12px] font-semibold mb-1 text-[#fff]">{item.title}</h1>
                       <p className="text-white text-[12px] mb-5">{item.desc}</p>
                       <div className="flex gap-2 bottom-5 absolute">
@@ -212,7 +212,7 @@ export default function Home() {
 
         {/* Experience Section */}
         <div className="mt-[100px] ml-3 md:hidden">
-          <h1 className="text-3xl font-bold mb-10 -ml-3">
+          <h1 className="text-2xl font-bold mb-5 -ml-3">
             🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Experiences</span>
           </h1>
           <ol className="relative border-s border-gray-200 dark:border-gray-700">
@@ -246,7 +246,7 @@ export default function Home() {
 
         {/* if screen md--- */}
         <div className="relative hidden md:block">
-          <h1 className="text-3xl font-bold mb-10 -ml-3 mt-10">
+          <h1 className="text-2xl font-bold mb-5 -ml-3 mt-10">
             🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Experiences</span>
           </h1>
           <div className="contains ">
@@ -314,26 +314,27 @@ export default function Home() {
         {/* End Experience Section */}
 
         {/* education section */}
-        <div className="relative overflow-hidden group ">
-          <h1 className="text-3xl font-bold mb-10 -ml-3">
+        <div className="relative">
+          <h1 className="text-2xl font-bold mb-5 -ml-3">
             🎓 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Education</span>
           </h1>
+          <div className="relative overflow-hidden group ">
+            <div className="overflow-hidden hover:cursor-pointer hover:shadow-lg md:py-[50px] md:px-[50px] flex justify-between bg-gradient-to-r from-[#11C5C6] to-[#72DAC3] relative py-2 px-3 shadow-sm border border-[#11c6c66e] rounded-lg">
+              <div className="relative z-10">
+                <span className="text-xs font-normal text-white sm:order-last sm:mb-0">2018 - 2022</span>
+                <h1 className="group-hover:text-[azure] duration-300 ease-in-out font-bold text-[#fff] tracking-wide">S1 Informatics</h1>
+                <p className="text-[12px] md:text-sm text-white tracking-wide">Universitas Teknokrat Indonesia</p>
+              </div>
 
-          <div className="overflow-hidden hover:cursor-pointer hover:shadow-lg md:py-[50px] md:px-[50px] flex justify-between bg-gradient-to-r from-[#11C5C6] to-[#72DAC3] relative py-2 px-3 shadow-sm border border-[#11c6c66e] rounded-lg">
-            <div className="relative z-10">
-              <span className="text-xs font-normal text-white sm:order-last sm:mb-0">2018 - 2022</span>
-              <h1 className="group-hover:text-[azure] duration-300 ease-in-out font-bold text-[#fff] tracking-wide">S1 Informatics</h1>
-              <p className="text-[12px] md:text-sm text-white tracking-wide">Universitas Teknokrat Indonesia</p>
+              <span className="block text-[100px] absolute z-[1] -left-[50px] rotate-45 opacity-20">🎓</span>
             </div>
-
-            <span className="block text-[100px] absolute z-[1] -left-[50px] rotate-45 opacity-20">🎓</span>
           </div>
           <div className="absolute right-3 -bottom-1 w-[150px] md:w-[250px] md:-bottom-[10px] ">
             <img className="group-hover:scale-110 duration-300 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)]" src="/img/guard.png" alt="" />
           </div>
         </div>
         {/* end education */}
-        <h1 className="mt-[50px] text-3xl font-bold mb-2 -ml-3">
+        <h1 className="mt-[50px] text-2xl font-bold mb-5 -ml-3">
           🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Skills & Tools</span>
           {/* 🧑‍💻 <span className="text-white">Skills & Tools</span> */}
         </h1>
@@ -362,7 +363,7 @@ export default function Home() {
       <footer className="relative bg-blueGray-200 pt-8 pb-6 mt-[100px] bg-[#ffffff7c]">
         <div>
           <div>
-            <h1 className="text-center text-[#11C5C6] font-thin text-2xl">Let&apos;s keep in touch!</h1>
+            <h1 className="text-center text-[#11C5C6] md:font-thin text-2xl">Let&apos;s keep in touch!</h1>
             <p className="text-center ">Find me on social media</p>
             <div className="flex justify-center gap-2 mt-3 mb-[50px]">
               <a className="flex justify-center items-center w-[50px] h-[50px] bg-[azure] rounded-full shadow-lg">
@@ -383,7 +384,7 @@ export default function Home() {
             </div>
           </div>
           <hr />
-          <h1 className="mt-1 text-center font-semibold text-[12px] ">Made with ❤️ by Arsy Berlian - 2023</h1>
+          <h1 className="mt-5 text-center font-semibold text-[12px] ">Made with ❤️ by Arsy Berlian - 2023</h1>
         </div>
       </footer>
 
