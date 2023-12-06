@@ -1,6 +1,8 @@
 import { Navbar } from "flowbite-react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const projectItem = [
@@ -111,8 +113,17 @@ export default function Home() {
     },
   ];
 
+  useEffect(() => {
+    // Inisialisasi AOS setelah komponen dimuat
+    AOS.init({
+      duration: 1000, // Durasi animasi dalam milidetik
+      easing: "ease-in-out", // Jenis animasi
+      once: true,
+    });
+  }, []);
+
   return (
-    <>
+    <main className="relative">
       {/* navbar section */}
       <Navbar fluid={false} rounded={true} className="backdrop-blur-lg shadow-sm bg-[transparent] sticky top-0 z-50">
         <Navbar.Brand href="https://flowbite.com/">
@@ -132,7 +143,7 @@ export default function Home() {
       </Navbar>
       {/* end navbar section */}
 
-      <main className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
+      <div className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row md:justify-between  ">
           {/* Left section */}
@@ -147,12 +158,17 @@ export default function Home() {
 
             <h1 className="text-[12px] md:text-sm text-slate-600 ">🌐 JavaScript | React | Next.js | Tailwind</h1>
 
-            <button className="shadow-lg mt-10 mb-5 text-sm bg-[#11C5C6] hover:bg-[#0C9BAB] text-white py-2 px-4 rounded">Contact Me</button>
+            <button data-aos="flip-left" className="shadow-lg mt-10 mb-5 text-sm bg-[#11C5C6] hover:bg-[#0C9BAB] text-white py-2 px-4 rounded">
+              Contact Me
+            </button>
           </div>
 
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
-            <div className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300 -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
+            <div className=" w-[90px] h-[90px] bg-[#11C5C6] rounded-full blur-3xl absolute -left-[50px] top-[100px]"></div>
+            <div className="w-[80px] h-[80px] bg-[orange] rounded-full blur-3xl absolute -right-[50px] bottom-[0px]"></div>
+
+            <div data-aos="zoom-in" className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300 -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -170,16 +186,21 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300  md:mx-[60px] lg:mx-[180px] mx-[160px]  my-[260px] flex gap-2 p-3 rounded-md w-[max-content] shadow-lg bg-slate-100 absolute z-10">
+            <div
+              data-aos="zoom-in-up"
+              className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300  md:mx-[60px] lg:mx-[180px] mx-[160px]  my-[260px] flex gap-2 p-3 rounded-md w-[max-content] shadow-lg bg-slate-100 absolute z-10"
+            >
               <h1 className="text-[12px] font-semibold ">🌐 Web Development</h1>
             </div>
 
             <Image src="/img/hero.png" alt="" className=" img w-[250px] md:w-[210px] lg:w-[250px] " width={200} height={200} />
           </div>
         </div>
-        <div className="w-full h-[55px]  bg-gradient-to-t from-[azure] -mt-[40px] sticky" />
-        {/* End Hero Section */}
+      </div>
+      <div className="w-full h-[90px]  bg-gradient-to-t from-[azure] -mt-[17px] sticky" />
+      {/* End Hero Section */}
 
+      <div className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
         {/* Projec Section */}
         <div className="mt-[100px] ">
           <h1 className="text-2xl font-bold mb-2">
@@ -194,7 +215,7 @@ export default function Home() {
                       <img className="w-full h-[200px] lg:h-[250px] bg-" src={item.image} alt="" />
                       <div className="h-[55px] w-full  bg-gradient-to-t from-[azure] absolute -bottom-[10px] " />
                     </div>
-                    <div className="absolute h-[70%] group-hover:bottom-0 ease-in-out duration-300 w-full  left-0 -bottom-[200px] px-4 pt-10 bg-gradient-to-t from-[#2a2a2a] ">
+                    <div className="absolute h-[80%] group-hover:bottom-0 ease-in-out duration-300 w-full  left-0 -bottom-[200px] px-4 pt-10 bg-gradient-to-t from-[#2a2a2a] ">
                       <h1 className="text-[12px] font-semibold mb-1 text-[#fff]">{item.title}</h1>
                       <p className="text-white text-[12px] mb-5">{item.desc}</p>
                       <div className="flex gap-2 bottom-5 absolute">
@@ -218,11 +239,11 @@ export default function Home() {
           <ol className="relative border-s border-gray-200 dark:border-gray-700">
             {experienceItem.map((item, index) => {
               return (
-                <li key={index} className="mb-10 ms-6">
+                <li data-aos="fade-up" key={index} className="mb-10 ms-6">
                   <span className=" absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                    <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+                    <img data-aos="fade-up" className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
                   </span>
-                  <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                  <div className="hover:border-[#11C5C6] ease-in-out duration-300 p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                     <span className="hidden md:inline text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md ">{item.status}</span>
                     <div className="items-center justify-between mb-3 sm:flex">
                       <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">{item.year}</time>
@@ -245,7 +266,7 @@ export default function Home() {
         </div>
 
         {/* if screen md--- */}
-        <div className="relative hidden md:block">
+        <div className="relative hidden md:block mt-28">
           <h1 className="text-2xl font-bold mb-5 -ml-3 mt-10">
             🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Experiences</span>
           </h1>
@@ -258,7 +279,7 @@ export default function Home() {
                       <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                         <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
                       </span>
-                      <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                      <div className="p-4 bg-white border border-[#11c6c66e] rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                         <span className="hidden md:inline text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md ">{item.status}</span>
                         <div className="items-center justify-between mb-3 sm:flex">
                           <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">{item.year}</time>
@@ -279,7 +300,7 @@ export default function Home() {
                 return null;
               })}
             </ol>
-            <ol className=" relative border-s border-gray-200 dark:border-gray-700">
+            <ol className=" relative border-s border-gray-200 dark:border-gray-700 mt-20">
               {experienceItem.map((item, index) => {
                 if (index >= 2) {
                   return (
@@ -287,7 +308,7 @@ export default function Home() {
                       <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                         <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
                       </span>
-                      <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                      <div className="p-4 bg-white border border-[#11c6c66e] rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                         <span className="hidden md:inline text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md ">{item.status}</span>
                         <div className="items-center justify-between mb-3 sm:flex">
                           <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">{item.year}</time>
@@ -309,16 +330,16 @@ export default function Home() {
               })}
             </ol>
           </div>
-          <div className="absolute bottom-0 w-[100%] h-[60px] bg-gradient-to-t from-[azure] blur-sm"></div>
+          <div className="absolute bottom-0 w-[100%] h-[30px] bg-gradient-to-t from-[azure] blur-sm"></div>
         </div>
         {/* End Experience Section */}
 
         {/* education section */}
-        <div className="relative">
+        <div className="relative group mt-28">
           <h1 className="text-2xl font-bold mb-5 -ml-3">
             🎓 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Education</span>
           </h1>
-          <div className="relative overflow-hidden group ">
+          <div className="relative overflow-hidden  ">
             <div className="overflow-hidden hover:cursor-pointer hover:shadow-lg md:py-[50px] md:px-[50px] flex justify-between bg-gradient-to-r from-[#11C5C6] to-[#72DAC3] relative py-2 px-3 shadow-sm border border-[#11c6c66e] rounded-lg">
               <div className="relative z-10">
                 <span className="text-xs font-normal text-white sm:order-last sm:mb-0">2018 - 2022</span>
@@ -334,27 +355,32 @@ export default function Home() {
           </div>
         </div>
         {/* end education */}
-        <h1 className="mt-[50px] text-2xl font-bold mb-5 -ml-3">
-          🧑‍💻 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Skills & Tools</span>
+
+        {/* skill section */}
+        <h1 className=" text-2xl font-bold mb-5 -ml-3 mt-28">
+          ⌨️ <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#11C5C6] to-[#26C9FC]">Skills & Tools</span>
           {/* 🧑‍💻 <span className="text-white">Skills & Tools</span> */}
         </h1>
-      </main>
+      </div>
 
-      {/* skill section */}
-      <div className=" bg-gradient-to-l   from-[#11C5C6] to-[#72DAC3]  py-5 shadow-sm">
+      {/*  */}
+      {/* <div className=" bg-gradient-to-b   from-[#11C5C6] to-[#72DAC3]  py-5 shadow-sm "> */}
+      <div className=" bg-[#11C5C6] py-5 shadow-sm ">
         <div className="container m-auto px-5 md:px-1 lg:px-24 relative">
           <div className="flex flex-wrap gap-3 md:justify-center ">
             {skillItem.map((item, index) => {
               return (
                 <div key={index} className="shadow-sm flex gap-2 justify-center hover:cursor-pointer border border-[#fff] rounded-lg w-[max-content] px-3 py-1 ">
                   {/* <img className="w-[20px] h-[20px]" src="" alt="" /> */}
-                  <h1 className="text-[13px] tracking-wide text-[#fff]">{item.name}</h1>
+                  <h1 className="text-[12px] tracking-wide text-[#fff]">{item.name}</h1>
                 </div>
               );
             })}
           </div>
         </div>
       </div>
+
+      {/*  */}
 
       {/* end skill section */}
 
@@ -389,6 +415,6 @@ export default function Home() {
       </footer>
 
       {/* End footer */}
-    </>
+    </main>
   );
 }
