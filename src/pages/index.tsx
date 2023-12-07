@@ -144,6 +144,8 @@ export default function Home() {
       {/* end navbar section */}
 
       <div className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
+        <div className=" w-[50px] h-[90px] bg-[#11C5C6] rounded-full blur-3xl absolute -left-[50px] top-[100px]"></div>
+
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row md:justify-between  ">
           {/* Left section */}
@@ -158,14 +160,14 @@ export default function Home() {
 
             <h1 className="text-[12px] md:text-sm text-slate-600 ">🌐 JavaScript | React | Next.js | Tailwind</h1>
 
-            <button data-aos="flip-left" className="shadow-lg mt-10 mb-5 text-sm bg-[#11C5C6] hover:bg-[#0C9BAB] text-white py-2 px-4 rounded">
+            <button data-aos="zoom-in" data-aos-duration="500" className="shadow-lg mt-10 mb-5 text-sm bg-[#11C5C6] hover:bg-[#0C9BAB] text-white py-2 px-4 rounded">
               Contact Me
             </button>
           </div>
 
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
-            <div className=" w-[90px] h-[90px] bg-[#11C5C6] rounded-full blur-3xl absolute -left-[50px] top-[100px]"></div>
+            {/* <div className=" w-[90px] h-[90px] bg-[#11C5C6] rounded-full blur-3xl absolute -left-[50px] top-[100px]"></div> */}
             <div className="w-[80px] h-[80px] bg-[orange] rounded-full blur-3xl absolute -right-[50px] bottom-[0px]"></div>
 
             <div data-aos="zoom-in" className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300 -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-2 py-3  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
@@ -209,7 +211,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4   overflow-y-hidden">
             {projectItem.map((item, index) => {
               return (
-                <div key={index} className="w-[100%]  border border-[white] overflow-hidden rounded-sm py-5 px-3 group">
+                <div data-aos="zoom-in" data-aos-duration="500" key={index} className="w-[100%]  border border-[white] overflow-hidden rounded-sm py-5 px-3 group">
                   <div className="shadow-xl relative rounded-lg overflow-hidden ">
                     <div className="relative ">
                       <img className="w-full h-[200px] lg:h-[250px] bg-" src={item.image} alt="" />
@@ -239,11 +241,11 @@ export default function Home() {
           <ol className="relative border-s border-gray-200 dark:border-gray-700">
             {experienceItem.map((item, index) => {
               return (
-                <li data-aos="fade-up" key={index} className="mb-10 ms-6">
+                <li key={index} className="mb-10 ms-6">
                   <span className=" absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                    <img data-aos="fade-up" className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
+                    <img className="rounded-full shadow-lg" src="/img/logo.png" alt="Thomas Lean image" />
                   </span>
-                  <div className="hover:border-[#11C5C6] ease-in-out duration-300 p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                  <div data-aos="fade-up" data-aos-duration="600" className="hover:border-[#11C5C6] ease-in-out duration-300 p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
                     <span className="hidden md:inline text-[12px] text-[#11cde5] border border-[#11cde5] px-2 py-1 rounded-md ">{item.status}</span>
                     <div className="items-center justify-between mb-3 sm:flex">
                       <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">{item.year}</time>
