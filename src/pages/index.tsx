@@ -144,7 +144,7 @@ export default function Home() {
       {/* end navbar section */}
 
       <div className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
-        <div className=" w-[100px] h-[100px] bg-[#11c6c6] -z-[10] rounded-full blur-3xl absolute -left-[50px] top-[10px]"></div>
+        <div className=" w-[100px] h-[100px] bg-[#fff] -z-[10] rounded-full blur-2xl absolute -left-[50px] top-[10px]"></div>
 
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row md:justify-between  ">
@@ -168,7 +168,7 @@ export default function Home() {
           {/* Right section */}
           <div className="  m-auto md:m-0 relative">
             {/* <div className=" w-[90px] h-[90px] bg-[#11C5C6] rounded-full blur-3xl absolute -left-[50px] top-[100px]"></div> */}
-            <div className="w-[200px] h-[200px] bg-[#ffa60079] rounded-full blur-3xl absolute -right-[50px] bottom-[0px]"></div>
+            <div className="w-[200px] h-[200px] bg-[#ffa60055] rounded-full blur-3xl absolute -right-[50px] bottom-[40px]"></div>
 
             <div data-aos="zoom-in" className="hover:scale-105 hover:cursor-pointer ease-in-out duration-300 -mx-[65px] md:-mx-[120px] my-[150px] flex gap-2 px-1 py-2  backdrop-blur-lg	border border-[#f7f7f7] rounded-lg absolute z-10">
               <div>
@@ -183,7 +183,7 @@ export default function Home() {
               <div>
                 <h1 className="text-[11px] font-semibold ">JavaScript</h1>
                 <p className="text-[10px] typewriter">
-                  <span className="text-[#11C5C6]">const</span> myName <span className="text-yellow-500">=</span> &quot;Arsy Berlian&quot;
+                  <span className="text-[#11C5C6]">const</span> name <span className="text-yellow-500">=</span> &quot;Arsy Berlian&quot;
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full h-[90px]  bg-gradient-to-t from-[azure] -mt-[17px] sticky" />
+      <div className="w-full h-[50px]  bg-[azure] -mt-[5px] sticky" />
       {/* End Hero Section */}
 
       <div className="container m-auto  mt-10 px-5 md:px-1 lg:px-24 relative">
